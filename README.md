@@ -17,11 +17,13 @@ It was originally developed as a solution to a recruitment challenge.
 
 ## Sample Input
 
-4
-cd /home/user
-cd ..
-pwd
-cd tmp
+```bash
+> 4
+> cd /home/user
+> cd ..
+> pwd
+> cd tmp
+```
 
 ## Sample Ouptput
 /home
