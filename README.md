@@ -25,10 +25,12 @@ It was originally developed as a solution to a recruitment challenge.
 > cd tmp
 ```
 
-## Sample Ouptput
-/home
-/home/tmp
+## Sample Output
 
+```bash
+> /home
+> /home/tmp
+```
 
 ## Running the Code
 
