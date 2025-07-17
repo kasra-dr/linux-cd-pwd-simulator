@@ -4,13 +4,13 @@ def parse_commands():
     """ Read the number of commands and return a list of commands """
     try:
         num_commands = int(sys.stdin.readline())
-        return [sys.readline().strip() for _ in range(num_commands)]
+        return [sys.stdin.readline().strip() for _ in range(num_commands)]
     except (ValueError, IndexError):
         return []
 
 def process_cd(path_arg, current_path):
     """ Process the cd command and return the new path as a list """
-    if path_arg.startwith('/'):
+    if path_arg.startswith('/'):
         path_stack = []
         components = path_arg[1:].split('/')
     else:
@@ -22,7 +22,7 @@ def process_cd(path_arg, current_path):
             if path_stack:
                 path_stack.pop()
         elif component and component != ".":
-            path_stack.appen(component)
+            path_stack.append(component)
 
     return path_stack
 
@@ -33,7 +33,7 @@ def execute_commands(commands):
         if not command:
             continue
 
-        parts = commands.split()
+        parts = command.split()
         if parts[0] == "pwd":
             print(f"/{'/'.join(current_path)}")
         elif parts[0] == "cd":
